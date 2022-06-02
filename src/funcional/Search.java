@@ -4,8 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 public class Search {
-    public static void search() {
-        //Поиск Student по имени в файле students.txt
+    public static void search() {  
         Scanner scanner = new Scanner(System.in);
         System.out.print("\nВведіть дату пропуску: ");
         String name = scanner.nextLine();
