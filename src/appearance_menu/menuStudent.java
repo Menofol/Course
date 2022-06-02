@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class menuStudent {
     public static void menu() throws Exception {
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) { // цикл для повторення меню
         System.out.print("\tMenu\n"
                         + "1 - Пошук по даті\n"
                         + "2 - Вивід всіх студентів\n"
@@ -18,31 +18,30 @@ public class menuStudent {
         switch (action) {
             case 1:
                 i = 1;
-                Search.search();
+                Search.search(); // виклик меню пошуку
                 break;
             case 2:
                 i = 1;
-                Show.show();
+                Show.show(); // вивід всіх студентів
                 break;
             case 3:
                 i = 1;
-                count();
+                count(); // виведення кількості пропусків студентів в групі
                 break;
             case 0:
                 i = 3;
                 break;
             default:
                 i = 1;
-                System.out.println("Невірний ввід");
+                System.out.println("Невірний ввід"); // помилка
                 break;
             }
         }
     }
-    // Підрахунок кількості пропусків студентів в групі по номеру групи і вивод на екран
-    public static void count() throws Exception {
+    public static void count() { // підрахунку кількості пропусків студентів в групі
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введіть номер групи: ");
+        System.out.print("Введіть номер групи: "); // введення номеру групи
         int group = scanner.nextInt();
-        System.out.println("Кількість пропусків студентів в групі " + group + ": \n" + Search.count(group));
+        System.out.println("Кількість пропусків студентів в групі " + group + ": \n" + Search.count(group)); // вивід на екран
     }
 }

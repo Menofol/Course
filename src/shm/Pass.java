@@ -8,7 +8,7 @@ import funcional.Sort;
 import java.io.*;
 import java.util.Scanner;
 public class Pass {
-    Student student = new Student();
+    Student student = new Student(); // об'єкт класу Student
     public static void menu() throws IOException { // меню
         Pass pass = new Pass(); // створюємо об'єкт класу Pass
         Scanner scanner = new Scanner(System.in); // створюємо об'єкт класу Scanner
@@ -26,12 +26,12 @@ public class Pass {
             switch (choice) {
                 case 1:
                     i = 1;
-                    pass.addPass();
-                    pass.printPass();
+                    pass.addPass(); // виклик меню додавання пропуска
+                    pass.printPass(); // виведення введених пропусків
                     break;
                 case 2:
                     i = 1;
-                    Show.show();
+                    Show.show(); // вивід всіх пропусків
                     break;
                 case 0:
                     i = 3;
@@ -39,16 +39,17 @@ public class Pass {
                     break;
                 case 3:
                     i = 1;
-                    Show.show();
-                    Delete.delete();
+                    Show.show(); // вивід всіх пропусків
+                    Delete.delete(); // виклик меню видалення пропуска
                     break;
                 case 4:
                     i = 1;
-                    Sort.sort();
+                    Sort.sort(); // виклик меню сортування
                     break;
                 case 5:
                     i = 1;
-                    Search.search();
+                    Show.show(); // вивід всіх пропусків
+                    Search.search(); // виклик меню пошуку
                     break;
                 default:
                     i = 1;
@@ -57,7 +58,7 @@ public class Pass {
             }
         }
     }
-    private void addPass() {
+    private void addPass() { // додавання пропуска
         System.out.print("Введіть Фамілію Им'я студента: ");
         Scanner scanner = new Scanner(System.in);
         String studentName = scanner.nextLine();
@@ -101,29 +102,29 @@ public class Pass {
             previusID=1; // якщо немає значення в файлі, то присвоюємо 1
         }
         try {
-            FileWriter fileWriter = new FileWriter("Student.txt", true);
-            fileWriter.write("" + previusID + ", ");
-            fileWriter.write("Студент: " + student.getName() + " | " );
-            fileWriter.write("Группа: " + student.getGroup() + " | ");
-            fileWriter.write("Курс: " + student.getCourse() + " | ");
-            fileWriter.write("Факультет: " + student.getFaculty() + " | ");
-            fileWriter.write("Тип пропуска: " + student.getPassType() + " | ");
-            fileWriter.write("Дата пропуска: " + student.getPassDate() + " | ");
-            fileWriter.write("Причина пропуска: " + student.getPassReason() + ";\n");
-            fileWriter.close();
+            FileWriter fileWriter = new FileWriter("Student.txt", true); // записуємо дані в файл
+            fileWriter.write("" + previusID + ", "); // записуємо попередній ID
+            fileWriter.write("Студент: " + student.getName() + " | " ); // записуємо дані про студента
+            fileWriter.write("Группа: " + student.getGroup() + " | ");  // записуємо дані про групу
+            fileWriter.write("Курс: " + student.getCourse() + " | "); // записуємо дані про курс
+            fileWriter.write("Факультет: " + student.getFaculty() + " | "); // записуємо дані про факультет
+            fileWriter.write("Тип пропуска: " + student.getPassType() + " | "); // записуємо дані про тип пропуска
+            fileWriter.write("Дата пропуска: " + student.getPassDate() + " | "); // записуємо дані про дату пропуска
+            fileWriter.write("Причина пропуска: " + student.getPassReason() + ";\n"); // записуємо дані про причину пропуска
+            fileWriter.close(); // закриваємо потік
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e); // повертаємо помилку
         }
     }
     private void printPass() {
-        System.out.print("\nСтудент: " + student.getName()
-                + "\nГруппа: " + student.getGroup()
-                + "\nКурс: " + student.getCourse()
-                + "\nФакультет: " + student.getFaculty()
-                + "\nТип пропуска: " + student.getPassType()
-                + "\nДата пропуска: " + student.getPassDate()
-                + "\nПричина пропуска: " + student.getPassReason()
+        System.out.print("\nСтудент: " + student.getName() // виводима в консоль дані про студента
+                + "\nГруппа: " + student.getGroup() // виводима в консоль дані про группу
+                + "\nКурс: " + student.getCourse() // виводима в консоль дані про курс
+                + "\nФакультет: " + student.getFaculty() // виводима в консоль дані про факультет
+                + "\nТип пропуска: " + student.getPassType() // виводима в консоль дані про тип пропуска
+                + "\nДата пропуска: " + student.getPassDate() // виводима в консоль дані про дату пропуска
+                + "\nПричина пропуска: " + student.getPassReason() // виводима в консоль дані про причину пропуска
                 + "\n");
     }
 }

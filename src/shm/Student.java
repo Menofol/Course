@@ -8,46 +8,46 @@ public class Student {
     private String passType;
     private String passDate;
     private String passReason;
-    public String getName() {
+    public String getName() { // отримання даних про прізвище
         return name;
     }
-    public void setName(String name) {
+    public void setName(String name) { // встановлення даних про прізвище
             this.name = name;
     }
-    public String getGroup() {
+    public String getGroup() { // отримання даних про групу
         return group;
     }
-    public void setGroup(String group) {
+    public void setGroup(String group) { // встановлення даних про групу
             this.group = group;
     }
-    public String getCourse() {
+    public String getCourse() { // отримання даних про курс
         return course;
     }
-    public void setCourse(String course) {
+    public void setCourse(String course) { // встановлення даних про курс
             this.course = course;
     }
-    public String getFaculty() {
+    public String getFaculty() { // отримання даних про факультет
         return faculty;
     }
-    public void setFaculty(String faculty) {
+    public void setFaculty(String faculty) { // встановлення даних про факультет
         this.faculty = faculty;
     }
-    public String getPassType() {
+    public String getPassType() { // отримання даних про тип пропуску
         return passType;
     }
-    public void setPassType(String passType) {
+    public void setPassType(String passType) { // встановлення даних про тип пропуску
         this.passType = passType;
     }
-    public String getPassDate() {
+    public String getPassDate() { // отримання даних про дату пропуску
         return passDate;
     }
-    public void setPassDate(String passDate) {
+    public void setPassDate(String passDate) { // встановлення даних про дату пропуску
         this.passDate = passDate;
     }
-    public String getPassReason() {
+    public String getPassReason() { // отримання даних про причину пропуску
         return passReason;
     }
-    public void setPassReason(String passReason) {
+    public void setPassReason(String passReason) { // встановлення даних про причину пропуску
         this.passReason = passReason;
     }
 }
