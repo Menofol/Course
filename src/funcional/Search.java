@@ -25,7 +25,7 @@ public class Search {
     }
     public static String count(int group) {
         String count = ""; // кількість груп
-        try { // перевірка на введення правильної групи
+        try {
             FileReader fileReader = new FileReader("Student.txt"); // введення даних з файлу
             Scanner scanner = new Scanner(fileReader);
             while (scanner.hasNextLine()) {
